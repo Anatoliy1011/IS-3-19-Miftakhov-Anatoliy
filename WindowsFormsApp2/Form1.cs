@@ -17,13 +17,14 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        class Complectyuwie
+        abstract class Complectyuwie <G>
         {
             public int cena;
             public int god_vipyska;
-            public string DisplayComplect()
+            G articul;
+            public virtual string Display()
             {
-                return ($"Цена: {cena}." + $" Год выпуска: {god_vipyska}.");
+                 return($"Цена: {cena}." + $" Год выпуска: {god_vipyska}.");
             }
             public Complectyuwie(int cn, int gv)
             {
@@ -31,12 +32,12 @@ namespace WindowsFormsApp2
                 god_vipyska = gv;
             }
         }
-        class CP : Complectyuwie
+        class CP <G> : Complectyuwie <G>
         {
-            public int chastota;
-            public int colvo_yader;
-            public int colvo_potokov;
-            public string DisplayCP()
+            public int chastota { get; set; }
+            public int colvo_yader { get; set; }
+            public int colvo_potokov { get; set; }
+            public override string Display()
             {
                 return ($"Частота: {chastota}." + $" Количество ядер: {colvo_yader}." + $" Количество потоков: {colvo_potokov}.");
             }
@@ -47,14 +48,14 @@ namespace WindowsFormsApp2
                 colvo_potokov = cp;
             }
         }
-        class Videocard : Complectyuwie
+        class Videocard <G> : Complectyuwie <G>
         {
-            public int chastotaCPU;
-            public string proizvoditel;
-            public int objem_pamyati;
-            public void DisplayVideo()
+            public int chastotaCPU { get; set; }
+            public string proizvoditel { get; set; }
+            public int objem_pamyati { get; set; }
+            public override string Display()
             {
-                MessageBox.Show($"Частота ЦПУ: {chastotaCPU}." + $" Производитель: {proizvoditel}." + $" Объём памяти: {objem_pamyati}.");
+                return($"Частота ЦПУ: {chastotaCPU}." + $" Производитель: {proizvoditel}." + $" Объём памяти: {objem_pamyati}.");
             }
             public Videocard(int cn, int gv, int ccpu, string pr, int op) : base(cn, gv)
             {
@@ -66,10 +67,14 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Complectyuwie cn = new Complectyuwie(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text));
-            listBox1.Items.Add(cn.DisplayComplect());
-            CP cp = new CP(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text));
-            listBox1.Items.Add(cp.DisplayCP());
+            CP<int> cp = new CP<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text));
+            listBox1.Items.Add(cp.Display());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Videocard<int> vс = new Videocard<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text));
+            listBox1.Items.Add(vс.Display());
         }
     }
 }
