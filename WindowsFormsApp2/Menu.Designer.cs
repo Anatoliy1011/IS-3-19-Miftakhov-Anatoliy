@@ -60,6 +60,7 @@ namespace WindowsFormsApp2
             this.button2.TabIndex = 1;
             this.button2.Text = "Нажимайте";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -109,7 +110,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = ",";
             this.ResumeLayout(false);
 
         }
