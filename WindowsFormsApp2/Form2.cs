@@ -7,19 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp2
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        class ConnBaza
         {
-            InitializeComponent();
+            public MySqlConnection ConnBaz()
+            {
+                string port = "33333";
+                string host = "caseum.ru";
+                string user = "test_user";
+                string password = "test_pass";
+                string db = "db_test";
+                string connStr = $"server={host};port={port};user={user};database={db};password={password};";
+                MySqlConnection conn = new MySqlConnection(connStr);
+                return conn;
+            }
         }
+            public Form2()
+            {
+                InitializeComponent();
+            }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            private void button1_Click(object sender, EventArgs e)
+            {
+                ConnBaza ConnBaza = new ConnBaza();
+                try
+                {
+                    ConnBaza.ConnBaz().Open();
+                }
+                catch (Exception zxc)
+                {
+                    MessageBox.Show($"{zxc}");
+                }
+                finally
+                {
+                    MessageBox.Show("Подключение успешно");
+                    ConnBaza.ConnBaz().Close();
+                }
+            }
         }
     }
 }
