@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp2
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         /// Обязательная переменная конструктора.
