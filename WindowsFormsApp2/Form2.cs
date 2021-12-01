@@ -45,10 +45,10 @@ namespace WindowsFormsApp2
                 }
                 finally
                 {
-                    MessageBox.Show("Подключение успешно");
+                    MessageBox.Show("Успешное подключение");
                     ConnBaza.ConnBaz().Close();
                 }
             }
         }
     }
-}
+

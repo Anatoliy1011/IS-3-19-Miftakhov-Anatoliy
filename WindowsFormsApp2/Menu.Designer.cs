@@ -51,7 +51,7 @@ namespace WindowsFormsApp2
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkMagenta;
+            this.button2.BackColor = System.Drawing.Color.Gold;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(33, 85);
@@ -64,7 +64,7 @@ namespace WindowsFormsApp2
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkRed;
+            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(33, 141);
@@ -73,10 +73,11 @@ namespace WindowsFormsApp2
             this.button3.TabIndex = 2;
             this.button3.Text = "Нажимайте";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(33, 197);
