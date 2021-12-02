@@ -24,24 +24,24 @@ namespace WindowsFormsApp2
             }
         private void button1_Click(object sender, EventArgs e)
         {
-                ConnCenter СonnCenter = new ConnCenter();
+                ConnCenter ConnCenter = new ConnCenter();
                 try
                 {
-                    ConnCenter.СonnCenter().Open();
+                    ConnCenter.connCenter().Open();
                     string commandStr = "SELECT id AS 'ID', fio AS 'ФИО', theme_kurs AS 'Тема' FROM t_stud";
-                    MyDA.SelectCommand = new MySqlCommand(commandStr, ConnCenter.СonnCenter());
+                    MyDA.SelectCommand = new MySqlCommand(commandStr, ConnCenter.connCenter());
                     MyDA.Fill(table);
                     bSource.DataSource = table;
                     dataGridView1.DataSource = bSource;
                 }
-                catch (Exception ex)
+                catch (Exception xyz)
                 {
-                    MessageBox.Show($"{ex}");
+                    MessageBox.Show($"{xyz}");
                 }
                 finally
                 {
                     MessageBox.Show("Подключение завершено.");
-                    ConnCenter.СonnCenter().Close();
+                    ConnCenter.connCenter().Close();
                 }
         }
 

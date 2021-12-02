@@ -77,7 +77,7 @@ namespace WindowsFormsApp2
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button4.BackColor = System.Drawing.Color.LawnGreen;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(33, 197);
@@ -86,10 +86,11 @@ namespace WindowsFormsApp2
             this.button4.TabIndex = 3;
             this.button4.Text = "Нажимайте";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.ForestGreen;
+            this.button5.BackColor = System.Drawing.Color.MediumOrchid;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(33, 253);

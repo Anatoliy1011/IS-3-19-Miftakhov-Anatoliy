@@ -40,7 +40,7 @@ namespace WindowsFormsApp2
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(12, 33);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 48);
+            this.button1.Size = new System.Drawing.Size(514, 48);
             this.button1.TabIndex = 0;
             this.button1.Text = "Нажимай";
             this.button1.UseVisualStyleBackColor = false;
@@ -51,7 +51,7 @@ namespace WindowsFormsApp2
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 87);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(514, 150);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -60,7 +60,7 @@ namespace WindowsFormsApp2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(262, 287);
+            this.ClientSize = new System.Drawing.Size(600, 287);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Name = "Form3";
