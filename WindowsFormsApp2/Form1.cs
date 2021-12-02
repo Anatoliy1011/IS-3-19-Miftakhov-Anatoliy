@@ -70,7 +70,7 @@ namespace WindowsFormsApp2
             CP<int> cp = new CP<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text));
             listBox1.Items.Add(cp.Display());
         }
-
+         
         private void button2_Click(object sender, EventArgs e)
         {
             Videocard<int> vс = new Videocard<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text));
