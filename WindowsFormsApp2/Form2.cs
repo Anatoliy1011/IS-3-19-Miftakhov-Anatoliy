@@ -13,9 +13,9 @@ namespace WindowsFormsApp2
 {
     public partial class Form2 : Form
     {
-        class ConnBaza
+        class ConnCenter
         {
-            public MySqlConnection ConnBaz()
+            public MySqlConnection ConnCent()
             {
                 string port = "33333";
                 string host = "caseum.ru";
@@ -34,19 +34,19 @@ namespace WindowsFormsApp2
 
             private void button1_Click(object sender, EventArgs e)
             {
-                ConnBaza ConnBaza = new ConnBaza();
+                ConnCenter ConnCenter = new ConnCenter();
                 try
                 {
-                    ConnBaza.ConnBaz().Open();
+                    ConnCenter.ConnCent().Open();
                 }
-                catch (Exception zxc)
+                catch (Exception yxz)
                 {
-                    MessageBox.Show($"{zxc}");
+                    MessageBox.Show($"{yxz}");
                 }
                 finally
                 {
                     MessageBox.Show("Успешное подключение");
-                    ConnBaza.ConnBaz().Close();
+                    ConnCenter.ConnCent().Close();
                 }
             }
         }
