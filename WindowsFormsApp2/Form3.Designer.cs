@@ -36,7 +36,7 @@ namespace WindowsFormsApp2
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(12, 33);
             this.button1.Name = "button1";
@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(546, 259);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);

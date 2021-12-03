@@ -44,7 +44,7 @@ namespace WindowsFormsApp2
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkCyan;
+            this.button1.BackColor = System.Drawing.Color.Gold;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(24, 31);
             this.button1.Name = "button1";
@@ -99,7 +99,7 @@ namespace WindowsFormsApp2
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
+            this.button2.BackColor = System.Drawing.Color.Gold;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(24, 83);
             this.button2.Name = "button2";
@@ -134,7 +134,7 @@ namespace WindowsFormsApp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.DarkOrange;
             this.ClientSize = new System.Drawing.Size(376, 335);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);

@@ -40,6 +40,12 @@ namespace WindowsFormsApp2
             Form4 newForm = new Form4();
             newForm.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form5 newForm = new Form5();
+            newForm.Show();
+        }
     }
 }
 

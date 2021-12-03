@@ -48,7 +48,15 @@ namespace WindowsFormsApp2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            try
+            {
+                DateTime dr = new DateTime();
+                dr = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
+                MessageBox.Show(DateTime.Today.Subtract(dr.Date).Days.ToString() + " дней с момента рождения.");
+            }
+            catch
+            {
+            }
         }
     }
 }
