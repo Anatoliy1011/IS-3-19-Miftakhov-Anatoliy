@@ -127,5 +127,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectCenter\ConnectCenter.csproj">
+      <Project>{ba612f98-0951-4647-9640-e597efb49af9}</Project>
+      <Name>ConnectCenter</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

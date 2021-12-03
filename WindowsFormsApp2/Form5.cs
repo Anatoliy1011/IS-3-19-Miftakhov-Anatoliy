@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using ConnectCenter;
 
 namespace WindowsFormsApp2
 {
@@ -17,42 +18,66 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-        //DataAdapter получает данные из источника данных.
+        MySqlConnection conn = ConnDB_Lib.connDB_lib();
         private MySqlDataAdapter MyDA = new MySqlDataAdapter();
-        //BindingSource обеспечивает унифицированный доступ к источнику данных.
         private BindingSource bSource = new BindingSource();
         private DataTable table = new DataTable();
-        private void button1_Click(object sender, EventArgs e)
+        private void Form5_Load(object sender, EventArgs e)
         {
-            ConnCenter connCenter = new ConnCenter();
+            try
+            {
+                conn.Open();
+                string commandStr = "SELECT idStud AS 'ID', fioStud AS 'ФИО', datetimeStud AS 'Дата рождения' FROM t_PraktStud";
+                MyDA.SelectCommand = new MySqlCommand(commandStr, ConnDB_Lib.connDB_lib());
+                MyDA.Fill(table);
+                bSource.DataSource = table;
+                dataGridView1.DataSource = bSource;
+            }
+            catch
+            {
+                MessageBox.Show("Исправьте ошибку!!");
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
+        }
+            private void button1_Click(object sender, EventArgs e)
+        {
             if (textBox1.TextLength != 0)
             {
-                try
+                string commandStr2 = $"INSERT INTO t_PraktStud (fioStud, datetimeStud) VALUES (@fio,@date)";
+                using (MySqlCommand command = new MySqlCommand(commandStr2, ConnDB_Lib.connDB_lib()))
                 {
-                    connCenter.connCenter().Open();
-                    string commandStr = $"INSERT INTO t_PraktStud (fioStud, datetimeStud) VALUES (@fio,@date)";
-                    //использование using, смотрел у github.com/sadus174
-                    using (MySqlCommand command = new MySqlCommand(commandStr, connCenter.connCenter()))
-                    {
-                        command.Parameters.Add("@fio", MySqlDbType.VarChar).Value = textBox1.Text;
-                        command.Parameters.Add("@date", MySqlDbType.DateTime).Value = dateTimePicker1.Text;
-                        command.Connection.Open();
-                        command.ExecuteNonQuery();
-                    }
+                    command.Parameters.Add("@fio", MySqlDbType.VarChar).Value = textBox1.Text;
+                    command.Parameters.Add("@date", MySqlDbType.DateTime).Value = dateTimePicker1.Value;
+                    command.Connection.Open();
+                    command.ExecuteNonQuery();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"{ex}");
-                }
-                finally
-                {
-                    MessageBox.Show("Соединение закрыто.");
-                    connCenter.connCenter().Close();
-                }
+                table.Clear();
+                string commandStr = "SELECT idStud AS 'ID', fioStud AS 'ФИО', datetimeStud AS 'Дата рождения' FROM t_PraktStud";
+                MyDA.SelectCommand = new MySqlCommand(commandStr, ConnDB_Lib.connDB_lib());
+                MyDA.Fill(table);
+                bSource.DataSource = table;
+                dataGridView1.DataSource = bSource;
             }
             else
             {
-                MessageBox.Show("Заполните поле ФИО");
+                MessageBox.Show("Заполните ФИО и дату рождения");
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                dataGridView1.CurrentCell = dataGridView1[e.ColumnIndex, e.RowIndex];
+                dataGridView1.CurrentRow.Selected = true;
+            }
+            catch
+            {
+
             }
         }
     }
