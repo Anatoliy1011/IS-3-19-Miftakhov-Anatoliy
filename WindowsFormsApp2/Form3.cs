@@ -13,9 +13,9 @@ namespace WindowsFormsApp2
 {
     public partial class Form3 : Form
     {
-            //DataAdapter представляет собой объект Command , получающий данные из источника данных.
+            //DataAdapter получает данные из источника данных.
             private MySqlDataAdapter MyDA = new MySqlDataAdapter();
-            //Объявление BindingSource, основная его задача, это обеспечить унифицированный доступ к источнику данных.
+            //BindingSource обеспечивает унифицированный доступ к источнику данных.
             private BindingSource bSource = new BindingSource();
             private DataTable table = new DataTable();
             public Form3()
