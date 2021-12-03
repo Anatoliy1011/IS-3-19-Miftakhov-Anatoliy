@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2", "WindowsFormsApp2\WindowsFormsApp2.csproj", "{DB56B6F1-C77C-4F6D-AEF3-4E6B7120F5D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectCenter", "ConnectCenter\ConnectCenter.csproj", "{BA612F98-0951-4647-9640-E597EFB49AF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DB56B6F1-C77C-4F6D-AEF3-4E6B7120F5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB56B6F1-C77C-4F6D-AEF3-4E6B7120F5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB56B6F1-C77C-4F6D-AEF3-4E6B7120F5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA612F98-0951-4647-9640-E597EFB49AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA612F98-0951-4647-9640-E597EFB49AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA612F98-0951-4647-9640-E597EFB49AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA612F98-0951-4647-9640-E597EFB49AF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

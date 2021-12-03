@@ -40,7 +40,7 @@ namespace WindowsFormsApp2
                 }
                 finally
                 {
-                    MessageBox.Show("Подключение завершено.");
+                    MessageBox.Show("Успешное подключение.");
                     ConnCenter.connCenter().Close();
                 }
         }
